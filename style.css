@@ -1,18 +1,44 @@
-import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
-
-body {
-  background-color: #414c55;
-  color: white;
-  font-family: 'Work Sans', sans-serif;
-  text-align: center;
-}
-
-#title {
+.break {
   border-bottom: 2px solid darkgray;
-  padding: 5px;
-  margin-bottom: 50px;
+  margin: 50px;
 }
 
 h1, h2 {
   margin: 5px;
+}
+
+img {
+  border: 5px solid #12173d;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #12173d;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  
+  transition: 0.3s;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #909edd;
+  color: #12173d;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #22896e;
+  color: white;
 }
