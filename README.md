@@ -1,2 +1,2 @@
 # sirfluffdev.github.io
-Fluff's Garage
+Github Pages site for personal projects
