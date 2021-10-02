@@ -1,0 +1,18 @@
+import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+
+body {
+  background-color: #414c55;
+  color: white;
+  font-family: 'Work Sans', sans-serif;
+  text-align: center;
+}
+
+#title {
+  border-bottom: 2px solid darkgray;
+  padding: 5px;
+  margin-bottom: 50px;
+}
+
+h1, h2 {
+  margin: 5px;
+}
