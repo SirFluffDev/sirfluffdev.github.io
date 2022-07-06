@@ -1,12 +1,26 @@
+/* Color palette */
 :root {
   --white: #d3d1d1;
   --gray: #161616;
   --red: #ff4532;
+  --blue: #3245ff;
   --green: #79b199;
   --peach-1: #AD8174;
   --peach-2: #917164;
 }
 
+/* Simple fade in animation*/
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Scrolling BG animation */
 @keyframes bgAnim {
   0% {
     background-position: 0px 0px;
@@ -23,9 +37,16 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+/*#region Title*/
+
 #title {
   text-align: center;
   margin: 3em;
+
+  opacity: 0;
+
+  animation: fadeIn 5s forwards;
+  animation-delay: 1s;
 }
 
 #title>h1 {
@@ -36,5 +57,45 @@ body {
 
 #title>p {
   font-size: 1.2vw;
+  color: var(--white);
+}
+
+/*#endregion */
+
+/*#region Options*/
+
+#options {
+  text-align: center;
+
+  font-size: 3vw;
+  font-weight: 200;
+}
+
+#options>a {
+  display: inline-block;
+  margin: 2vh;
+
+  transition: 0.2s;
+  color: var(--white);
+  text-decoration: none;
+
+  opacity: 0;
+
+  animation: fadeIn 5s forwards;
+  animation-delay: 2s;
+}
+
+#options>a:hover {
+  text-shadow: var(--white) 0px 0px 10px;
+}
+
+/*#endregion*/
+
+#github {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin: 2px;
+  font-size: 12px;
   color: var(--white);
 }
