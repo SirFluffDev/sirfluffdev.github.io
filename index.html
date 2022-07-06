@@ -24,8 +24,8 @@
     ctx.fillStyle = "#ffffff";
 
     // Generate starfield
-    for (let i = 0; i < 150; i++) {
-      ctx.globalAlpha = 0.2 + Math.random() / 2;
+    for (let i = 0; i < 250; i++) {
+      ctx.globalAlpha = 0.1 + Math.random() / 4;
 
       ctx.beginPath();
 
@@ -41,7 +41,7 @@
 
     // Set background image to canvas
     document.body.style.backgroundImage = `url(${canvas.toDataURL()})`;
-    document.body.style.animation = 'bgAnim 10s linear infinite';
+    document.body.style.animation = 'bgAnim 20s linear infinite';
   </script>
 
   <div id="title">
