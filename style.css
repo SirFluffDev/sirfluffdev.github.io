@@ -2,6 +2,7 @@
 :root {
   --white: #d3d1d1;
   --gray: #161616;
+  --black: #101010;
   --red: #ff4532;
   --blue: #3245ff;
   --green: #79b199;
@@ -20,6 +21,16 @@
   }
 }
 
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
 /* Scrolling BG animation */
 @keyframes bgAnim {
   0% {
@@ -34,10 +45,11 @@
 body {
   background-color: var(--gray);
 
+  color: var(--white);
   font-family: 'Montserrat', sans-serif;
 }
 
-/*#region Title*/
+/*#region Home*/
 
 #title {
   text-align: center;
@@ -60,10 +72,6 @@ body {
   color: var(--white);
 }
 
-/*#endregion */
-
-/*#region Options*/
-
 #options {
   text-align: center;
 
@@ -75,9 +83,9 @@ body {
   display: inline-block;
   margin: 2vh;
 
-  transition: 0.2s;
   color: var(--white);
   text-decoration: none;
+  cursor: pointer;
 
   opacity: 0;
 
@@ -85,17 +93,78 @@ body {
   animation-delay: 2s;
 }
 
-#options>a:hover {
-  text-shadow: var(--white) 0px 0px 10px;
+/*#endregion */
+
+/*#region About*/
+
+#about>div {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  height: 100%;
+  width: 20%;
+  padding-left: 2em;
+  padding-right: 2em;
+
+  animation: fadeIn 1s forwards;
+  animation-delay: 0.2s;
+  opacity: 0;
+
+  line-height: 1.6em;
+
+  background-color: var(--black);
+}
+
+#about>div>h1 {
+  padding-bottom: 0.2em;
+  margin-bottom: 0;
+  border-bottom: 4px solid var(--gray);
+}
+
+#about>img {
+  position: fixed;
+  right: 2.5vh;
+  top: 2.5vh;
+
+  background-color: var(--black);
+  padding: 1em;
+  height: 90vh;
+  width: auto;
+
+  animation: fadeIn 1s forwards;
+  animation-delay: 1.0s;
+  opacity: 0;
 }
 
 /*#endregion*/
 
-#github {
+.glow_text {
+  background: transparent;
+  transition: 0.2s;
+}
+
+.glow_text:hover {
+  text-shadow: var(--white) 0px 0px 10px;
+}
+
+#back {
   position: fixed;
   bottom: 0;
   left: 0;
   margin: 2px;
-  font-size: 12px;
+
+  border: 1px solid var(--white);
+  border-radius: 10%;
+
   color: var(--white);
+  font-size: 1.2vw;
+  font-weight: 100;
+}
+
+#github {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 2px;
 }

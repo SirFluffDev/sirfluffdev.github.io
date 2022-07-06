@@ -10,6 +10,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+
+  <script defer src="page-manager.js"></script>
   <title>Luke Willis</title>
 </head>
 
@@ -44,20 +46,53 @@
     document.body.style.animation = 'bgAnim 20s linear infinite';
   </script>
 
-  <div id="title">
-    <h1>Luke Willis</h1>
-    <p>Rust and C++ enthusiast</p>
-  </div>
+  <main class="page" id="home">
+    <div id="title">
+      <h1>Luke Willis</h1>
+      <p>Theatre and Gamedev enthusiast</p>
+    </div>
 
-  <br />
-  <br />
-  <br />
+    <br />
+    <br />
+    <br />
 
-  <div id="options">
-    <a class="option" href="">About me</a><br>
-    <a class="option" href="">Projects</a><br>
-    <a class="option" href="">Misc</a><br>
-  </div>
+    <div id="options">
+      <a class="glow_text" onclick="set_page('about')">About me</a><br>
+      <a class="glow_text" onclick="set_page('projects')">Projects</a><br>
+      <a class="glow_text" onclick="set_page('misc')">Misc</a><br>
+    </div>
+  </main>
+
+  <main class="page" id="about" hidden>
+    <div>
+      <h1>Howdy!</h1>
+      <p>
+        My name is Luke Willis.<br><br>
+        I've loved video games since I was young - but I loved the idea of making them even more.<br><br>Thanks to this,
+        I've been learning to program! It can be a bit difficult sometimes, but it's 100 percent worth it.<br><br>I'm
+        fluent in JavaScript, I know a little C++, and I'm currently learning the Rust programming language.<br><br>I
+        also love to act! I'm not particularly great in the singing or dancing department, but I like to think I'm
+        pretty funny.Granted, I'm not the most skilled out there, but it certainly is fun.<br><br>If you want to contact
+        me, my e-mail is willisluke262@gmail.com. I can't guarantee I'll respond, but I'll do my
+        best!
+      </p>
+    </div>
+
+    <img src="./img/photo.jpg" alt="Funny-looking guy">
+  </main>
+
+  <main class="page" id="projects" hidden>
+    My projects
+  </main>
+
+  <main class="page" id="misc" hidden>
+    Misc stuff
+  </main>
+
+  <!-- Back button for pages -->
+  <button id="back" class="glow_text" onclick="set_page('home')" hidden>
+    Back
+  </button>
 
   <!-- Github icon -->
   <a id="github" href="https://github.com/SirFluffDev">
