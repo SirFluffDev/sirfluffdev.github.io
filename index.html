@@ -2,34 +2,52 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <title>Luke Willis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
 
-  <!-- Import the webpage's stylesheet -->
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Luke Willis</title>
 </head>
 
 <body>
-  <div class="topnav">
-    <a href="index.html" class="active">Home</a>
-    <a href="projects.html">Projects</a>
-    <a href="minecraft.html">Minecraft</a>
-    <a href="discord.html">Discord</a>
-  </div>
+  <!--Fancy star BG-->
+  <script>
+    const canvas = document.createElement("canvas");
+    canvas.width = 512;
+    canvas.height = 512;
+    const ctx = canvas.getContext("2d");
 
-  <br />
-  <br />
-  <br />
+    ctx.fillStyle = "#ffffff";
+
+    // Generate starfield
+    for (let i = 0; i < 150; i++) {
+      ctx.globalAlpha = 0.2 + Math.random() / 2;
+
+      ctx.beginPath();
+
+      ctx.arc(
+        Math.round(Math.random() * canvas.width),
+        Math.round(Math.random() * canvas.height),
+        1 + (Math.random() * 2),
+        0, 2 * Math.PI
+      );
+
+      ctx.fill();
+    }
+
+    // Set background image to canvas
+    document.body.style.backgroundImage = `url(${canvas.toDataURL()})`;
+    document.body.style.animation = 'bgAnim 10s linear infinite';
+  </script>
 
   <div id="title">
-    <h1>Fluff's Garage</h1>
-    <i>Personal site for hosting my several projects</i><br /><br />
+    <h1>Luke Willis</h1>
+    <p>Rust and C++ enthusiast</p>
   </div>
-
-  <br />
-  Hi! I'm SirFluff, a coding enthusiast focused on webdev.<br />
-  I like working with javascript, and have made a couple things for fun.<br />
-  Consider checking them out!
 </body>
 
 </html>
