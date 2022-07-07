@@ -139,6 +139,79 @@ body {
 
 /*#endregion*/
 
+/*#region Projects*/
+
+@keyframes projectEnterLeft {
+  from {
+    opacity: 0;
+    transform: translate(-5vw, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0vw, 0);
+  }
+}
+
+@keyframes projectEnterRight {
+  from {
+    opacity: 0;
+    transform: translate(5vw, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0vw, 0);
+  }
+}
+
+#projects>.project {
+  width: 30vw;
+  left: calc(50% - 15vw);
+  background-color: var(--black);
+  position: relative;
+  margin: 1vw;
+  padding: 10px;
+
+  opacity: 0;
+}
+
+#projects>.project>p {
+  font-size: 1.2vw;
+  padding: 0.5em;
+}
+
+#projects>.project>h3 {
+  display: inline;
+  padding-left: 0.2em;
+  padding-right: 0.2em;
+  padding-bottom: 0.2em;
+  margin-bottom: 0;
+  font-size: 2vw;
+  border-bottom: 4px solid #191919;
+}
+
+#projects>.project>img {
+  position: relative;
+  bottom: 0.5em;
+  left: 0.5em;
+  width: calc(100% - 2em);
+  padding: 0.5em;
+  outline: 2px solid var(--gray);
+}
+
+#projects>.project>i {
+  display: block;
+  position: relative;
+  text-align: center;
+  padding: 1em;
+  width: calc(100% - 2em);
+  border-bottom: 4px solid #191919;
+  border-top: 4px solid #191919;
+}
+
+/*#endregion*/
+
 .glow_text {
   background: transparent;
   transition: 0.2s;

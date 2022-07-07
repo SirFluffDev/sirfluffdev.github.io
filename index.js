@@ -29,3 +29,14 @@ function set_page(name) {
     }
   }, 3000);
 }
+
+// Setup certain things
+const projects = document.getElementsByClassName('project');
+for (let i = 0; i < projects.length; i++) {
+  const proj = projects[i];
+
+  if (i % 2 === 0) proj.style.animation = "projectEnterLeft 1s ease-in-out forwards";
+  else proj.style.animation = "projectEnterRight 1s ease-in-out forwards";
+
+  proj.style.animationDelay = `${i / 2}s`;
+}
